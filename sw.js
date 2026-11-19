@@ -1,5 +1,5 @@
 // Офлайн-кэш. При изменении файлов увеличьте номер версии.
-const V="atelier-v4",FILES=["./","index.html","manifest.json","icon.png","logo.png","logo-white.png","icon-512.png"];
+const V="atelier-v5",FILES=["./","index.html","manifest.json","icon.png","logo.png","logo-white.png","icon-512.png"];
 self.addEventListener("install",e=>{
  e.waitUntil(caches.open(V).then(c=>Promise.all(FILES.map(f=>c.add(f).catch(()=>{})))));
  self.skipWaiting();
